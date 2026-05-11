@@ -1,13 +1,18 @@
 import ArtPiece from './ArtPiece.jsx'
 
-export default function CategorySection({ id, title, pieces }) {
+export default function CategorySection({ id, title, pieces, onSelect, baseIndex = 0 }) {
   return (
     <section id={id} className="category">
       <div className="container">
         <h2 className="category-title">{title}</h2>
         <div className="gallery-grid">
           {pieces.map((piece, i) => (
-            <ArtPiece key={piece.src || i} index={i} {...piece} />
+            <ArtPiece
+              key={piece.src || i}
+              index={i}
+              onSelect={() => onSelect && onSelect(baseIndex + i)}
+              {...piece}
+            />
           ))}
         </div>
       </div>
