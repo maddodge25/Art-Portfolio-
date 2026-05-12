@@ -7,7 +7,7 @@ export const categories = [
     id: 'charcoal-graphite',
     title: 'Charcoal & Graphite',
     pieces: [
-      { src: '/images/charcoal-graphite/charcoal-graphite-01.png', title: 'Shoreline', medium: 'Charcoal, 2026' },
+      { src: '/images/charcoal-graphite/charcoal-graphite-01.png', title: 'Shoreline', medium: 'Charcoal and graphite, 2026' },
       { src: '/images/charcoal-graphite/charcoal-graphite-02.png', title: 'Three Forms', medium: 'Charcoal, 2026' },
       { src: '/images/charcoal-graphite/charcoal-graphite-03.png', title: 'Childhood', medium: 'Graphite, 2026' },
       { src: '/images/charcoal-graphite/charcoal-graphite-04.png', title: 'Counting Pears', medium: 'Charcoal, 2024' },
