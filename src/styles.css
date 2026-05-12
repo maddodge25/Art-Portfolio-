@@ -511,11 +511,25 @@ img { display: block; max-width: 100%; height: auto; }
 
 @media (max-width: 600px) {
   .lightbox { padding: 1rem 0.5rem; }
-  .lightbox-close { top: 0.75rem; right: 0.75rem; }
-  .lightbox-nav { padding: 0.5rem; }
-  .lightbox-prev { left: 0.25rem; }
-  .lightbox-next { right: 0.25rem; }
   .lightbox-title { font-size: 1.15rem; }
+
+  /* Touch devices don't show hover state, so give the controls a permanent
+     visible circular backdrop on mobile. */
+  .lightbox-close,
+  .lightbox-nav {
+    background: rgba(20, 28, 36, 0.55);
+    color: rgba(250, 248, 244, 0.96);
+    padding: 0.6rem;
+  }
+  .lightbox-close svg,
+  .lightbox-nav svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2;
+  }
+  .lightbox-close { top: 0.75rem; right: 0.75rem; }
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
 }
 
 /* ---------- Page transitions ---------- */
