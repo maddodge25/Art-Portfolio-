@@ -513,23 +513,24 @@ img { display: block; max-width: 100%; height: auto; }
   .lightbox { padding: 1rem 0.5rem; }
   .lightbox-title { font-size: 1.15rem; }
 
-  /* Touch devices don't show hover state, so give the controls a permanent
-     visible circular backdrop on mobile. */
+  /* Touch devices don't show hover state, so use high-contrast solid
+     white circles with dark icons — clearly tappable against the dim backdrop. */
   .lightbox-close,
   .lightbox-nav {
-    background: rgba(20, 28, 36, 0.55);
-    color: rgba(250, 248, 244, 0.96);
-    padding: 0.6rem;
+    background: rgba(250, 248, 244, 0.94);
+    color: rgba(20, 28, 36, 0.88);
+    padding: 0.75rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
   }
   .lightbox-close svg,
   .lightbox-nav svg {
-    width: 28px;
-    height: 28px;
-    stroke-width: 2;
+    width: 30px;
+    height: 30px;
+    stroke-width: 2.4;
   }
-  .lightbox-close { top: 0.75rem; right: 0.75rem; }
-  .lightbox-prev { left: 0.5rem; }
-  .lightbox-next { right: 0.5rem; }
+  .lightbox-close { top: 0.85rem; right: 0.85rem; }
+  .lightbox-prev { left: 0.6rem; }
+  .lightbox-next { right: 0.6rem; }
 }
 
 /* ---------- Page transitions ---------- */
