@@ -9,3 +9,8 @@ dist
 # Local backups of replaced/edited artwork — keep local, don't deploy
 *.unfinished.*
 *.original.*
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
