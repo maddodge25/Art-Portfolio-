@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-export default function WaveBg() {
+export default function WaveBg({ amplitudeScale = 1 }) {
   const svgRef = useRef(null)
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function WaveBg() {
       const yAt = (x) => {
         let y = baseY
         for (const c of wave.components) {
-          y += c.amp * Math.sin(x * c.freq + c.phase + t * c.speed)
+          y += c.amp * amplitudeScale * Math.sin(x * c.freq + c.phase + t * c.speed)
         }
         return y
       }
@@ -88,7 +88,7 @@ export default function WaveBg() {
       cancelAnimationFrame(raf)
       window.removeEventListener('resize', resize)
     }
-  }, [])
+  }, [amplitudeScale])
 
   return (
     <svg ref={svgRef} className="wave-bg" preserveAspectRatio="none" aria-hidden="true">

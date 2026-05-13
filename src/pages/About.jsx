@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <section className="page-heading page-heading--wave reveal">
-        <WaveBg />
+        <WaveBg amplitudeScale={0.55} />
         <div className="container">
           <h1>About</h1>
         </div>
