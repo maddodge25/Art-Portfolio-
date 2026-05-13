@@ -22,6 +22,7 @@ export const categories = [
       { src: '/images/mixed-media/mixed-media-03.png', title: 'Teddy', medium: 'Plaster and acrylic paint, 2024' },
       { src: '/images/mixed-media/mixed-media-02.png', title: 'Bloom', medium: 'Paint marker and acrylic paint, 2024' },
       { src: '/images/mixed-media/mixed-media-01.png', title: 'Bulldog', medium: 'Watercolor and acrylic paint, 2024' },
+      { src: '/images/mixed-media/mixed-media-06.png', title: 'Horizon', medium: 'Melted wax and acrylic paint, 2025' },
     ],
   },
   {
