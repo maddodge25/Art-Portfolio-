@@ -6,6 +6,7 @@
   --border: #e8e2d8;        /* warm soft gray */
   --accent: #5c8b89;        /* muted sea-glass teal */
   --accent-hover: #4a7472;  /* deeper sea-glass for hovered button */
+  --accent-light: #a5c5c1;  /* lighter sea-glass for soft accents */
   --max-width: 1200px;
 
   --font-serif: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
@@ -342,7 +343,7 @@ img { display: block; max-width: 100%; height: auto; }
 .about-photo {
   background: var(--bg);
   aspect-ratio: 3 / 4;
-  border: 3px solid var(--accent);
+  border: 3px solid var(--accent-light);
   padding: 10px;
   box-shadow:
     0 0 0 1px rgba(92, 139, 137, 0.15),
