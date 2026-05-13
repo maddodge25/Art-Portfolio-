@@ -5,3 +5,7 @@ dist
 *.log
 .claude/
 .wrangler/
+
+# Local backups of replaced/edited artwork — keep local, don't deploy
+*.unfinished.*
+*.original.*
