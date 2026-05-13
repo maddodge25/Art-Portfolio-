@@ -1,8 +1,13 @@
+import WaveBg from '../components/WaveBg.jsx'
+
 export default function About() {
   return (
     <>
-      <section className="page-heading container reveal">
-        <h1>About</h1>
+      <section className="page-heading page-heading--wave reveal">
+        <WaveBg />
+        <div className="container">
+          <h1>About</h1>
+        </div>
       </section>
 
       <section className="about container reveal">

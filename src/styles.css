@@ -178,6 +178,17 @@ img { display: block; max-width: 100%; height: auto; }
   text-align: center;
 }
 
+/* Wave-backed page heading (used on About) */
+.page-heading--wave {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-heading--wave .container {
+  position: relative;
+  z-index: 1;
+}
+
 .page-heading h1 {
   font-family: var(--font-serif);
   font-size: clamp(2.75rem, 6.5vw, 4.75rem);
@@ -329,11 +340,34 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .about-photo {
-  background: #f0ece5;
+  background: var(--bg);
   aspect-ratio: 3 / 4;
-  border: 1px solid var(--border);
-  padding: 8px;
-  box-shadow: 0 2px 18px rgba(31, 41, 55, 0.06);
+  border: 3px solid var(--accent);
+  padding: 10px;
+  box-shadow:
+    0 0 0 1px rgba(92, 139, 137, 0.15),
+    0 8px 32px rgba(92, 139, 137, 0.22),
+    0 4px 12px rgba(31, 41, 55, 0.08);
+  animation: photoBreath 5s ease-in-out infinite;
+}
+
+@keyframes photoBreath {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px rgba(92, 139, 137, 0.15),
+      0 8px 32px rgba(92, 139, 137, 0.22),
+      0 4px 12px rgba(31, 41, 55, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(92, 139, 137, 0.35),
+      0 14px 46px rgba(92, 139, 137, 0.42),
+      0 6px 18px rgba(31, 41, 55, 0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-photo { animation: none; }
 }
 
 .about-photo img {
@@ -361,7 +395,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ---------- Contact ---------- */
 .contact {
-  padding: 4rem 0 8rem;
+  padding: 0.5rem 0 8rem;
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
@@ -376,7 +410,7 @@ img { display: block; max-width: 100%; height: auto; }
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 0;
 }
 
 .contact-links a {
