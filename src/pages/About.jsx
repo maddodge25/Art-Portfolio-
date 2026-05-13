@@ -22,7 +22,8 @@ export default function About() {
             East Coast influence. Her practice spans personal commissions and
             academic portfolio work, exploring themes that range from
             childhood memory to the textures and forms of marine life. She
-            continues to explore and experiment with new mediums.
+            continues to explore and experiment with new mediums &mdash; most
+            recently digital art, with new pieces to come.
           </p>
         </div>
       </section>
